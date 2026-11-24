@@ -1,0 +1,65 @@
+
+algoritmo "Sistema_Academia"
+
+var
+   nome: caractere
+   perfil: caractere
+
+inicio
+
+   escreva("=== SISTEMA DE ACADEMIA ===")
+   escreval("")
+   
+   escreva("Digite o nome do funcionario: ")
+   leia(nome)
+
+   repita
+      escreva("Digite o perfil (A, R, P, I ou G): ")
+      leia(perfil)
+
+      perfil <- maiusc(perfil)
+
+      se (perfil <> "A") e (perfil <> "R") e (perfil <> "P") e (perfil <> "I") e (perfil <> "G") entao
+         escreval("Perfil invalido! Digite novamente.")
+      fimse
+
+   ate (perfil = "A") ou (perfil = "R") ou (perfil = "P") ou (perfil = "I") ou (perfil = "G")
+
+   escreval("")
+   escreval("Funcionario: ", nome)
+
+   escolha perfil
+
+      caso "A"
+         escreval("Perfil: Administrador")
+         escreval("1 - Cadastrar funcionarios")
+         escreval("2 - Gerenciar usuarios")
+         escreval("3 - Consultar relatorios")
+         escreval("4 - Gerenciar academia")
+
+      caso "R"
+         escreval("Perfil: Recepcionista")
+         escreval("1 - Cadastrar alunos")
+         escreval("2 - Consultar alunos")
+         escreval("3 - Registrar pagamentos")
+
+      caso "P"
+         escreval("Perfil: Professor")
+         escreval("1 - Consultar alunos")
+         escreval("2 - Gerenciar turmas")
+         escreval("3 - Registrar frequencia")
+
+      caso "I"
+         escreval("Perfil: Instrutor")
+         escreval("1 - Consultar treinos")
+         escreval("2 - Acompanhar exercicios")
+         escreval("3 - Registrar evolucao")
+
+      caso "G"
+         escreval("Perfil: Colaborador Geral")
+         escreval("1 - Consultar informacoes internas")
+         escreval("2 - Visualizar comunicados")
+
+   fimescolha
+
+fimalgoritmo
